@@ -1,0 +1,4 @@
+6,admin,TestGroupA,abc;def;ghi
+7,admin,TestGroupB,ka;ki;ku;ke;ko
+8,admin,TestGroupC,orange;calico;white;black
+6,guest,TestGroupA,abc;def;ghi

@@ -1,0 +1,53 @@
+plugins {
+    id 'org.springframework.boot' version '3.1.3'
+    id 'java'
+}
+
+group 'com.catalk'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.8.1'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.8.1'
+    implementation group: 'org.postgresql', name: 'postgresql', version: '42.6.0'
+    implementation 'org.springframework.boot:spring-boot-starter-web:3.1.3'
+    implementation 'org.springframework.boot:spring-boot-starter-mail:3.1.3'
+    implementation 'jakarta.mail:jakarta.mail-api:2.1.2'
+    implementation 'org.mindrot:jbcrypt:0.4'
+    implementation("io.jsonwebtoken:jjwt:0.9.1")
+    compileOnly("jakarta.websocket:jakarta.websocket-api:2.1.1")
+    implementation 'org.springframework:spring-websocket:6.0.12'
+    implementation 'com.google.code.gson:gson:2.10.1'
+    implementation 'org.springframework:spring-messaging:6.0.12'
+
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.8.1'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.8.1'
+    implementation 'org.glassfish.tyrus:tyrus-server:2.1.3'
+    implementation("org.glassfish.tyrus:tyrus-container-grizzly-server:2.1.3") {
+        exclude group: 'org.glassfish.grizzly'
+    }
+    implementation group: 'org.postgresql', name: 'postgresql', version: '42.6.0'
+    implementation 'org.glassfish.tyrus:tyrus-client:2.1.3'
+    testImplementation 'org.springframework.boot:spring-boot-starter-test:3.1.3'
+    compileOnly 'jakarta.platform:jakarta.jakartaee-api:10.0.0'
+    implementation 'org.springframework:spring-messaging:6.0.12'
+    implementation group: 'org.java-websocket', name: 'Java-WebSocket', version: '1.5.4'
+    implementation 'com.google.code.gson:gson:2.10.1'
+
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.8.1'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.8.1'
+    implementation group: 'jakarta.websocket', name: 'jakarta.websocket-client-api', version: '2.1.1'
+    implementation group: 'org.glassfish.tyrus.bundles', name: 'tyrus-bundles', version: '2.1.3', ext: 'pom'
+    implementation group: 'org.glassfish.tyrus', name: 'tyrus-client', version: '2.1.3'
+    implementation group: 'org.glassfish.tyrus.bundles', name: 'tyrus-standalone-client', version: '2.1.3'
+    implementation group: 'org.java-websocket', name: 'Java-WebSocket', version: '1.5.4'
+    implementation 'org.springframework:spring-websocket:6.0.12'
+}
+
+test {
+    useJUnitPlatform()
+}
